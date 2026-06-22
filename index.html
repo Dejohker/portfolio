@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdulrazak Adeola — Full-Stack Developer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <div class="nav-logo">AA_dev</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a
+        href="#contact"
+        class="btn btn-primary"
+        style="padding: 0.5rem 1.2rem; font-size: 0.825rem"
+        >Hire Me</a
+      >
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-tag"><span></span> Available for freelance work</div>
+          <h1 class="hero-name">
+            Abdulrazak<br /><span class="accent">Al ameen</span><br />Adeola.
+          </h1>
+          <p class="hero-title">// Full-Stack Developer</p>
+          <p class="hero-desc">
+            I build fast, clean, and scalable web experiences — from
+            pixel-perfect frontends to robust backend systems. Let's turn your
+            ideas into products.
+          </p>
+          <div class="btn-group">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-outline">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-ring"></div>
+          <img src="joker.jpeg" alt="Abdulrazak Adeola" class="hero-photo" />
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="section-label">About Me</p>
+          <h2>I build things for the web.</h2>
+          <div class="divider"></div>
+          <p>
+            I'm a full-stack developer who loves crafting digital experiences
+            that are both beautiful and functional. I work across the entire
+            stack — from designing responsive interfaces with HTML, CSS, and
+            JavaScript, to building and deploying backend systems and APIs.
+          </p>
+          <p>
+            When I'm not coding, I'm writing about web development, exploring
+            new tools, or helping clients bring their ideas to life.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-num">2+</div>
+            <div class="stat-label">Years of experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">15+</div>
+            <div class="stat-label">Projects completed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">10+</div>
+            <div class="stat-label">Happy clients</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">Lines of code written</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <p class="section-label">What I Know</p>
+      <h2>Skills & Tools</h2>
+      <div class="divider"></div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Frontend</h3>
+          <div class="skill-list">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Responsive Design</span>
+            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">Figma</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Backend</h3>
+          <div class="skill-list">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Git & GitHub</span>
+            <span class="skill-tag">Deployment</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <p class="section-label">My Work</p>
+      <h2>Featured Projects</h2>
+      <div class="divider"></div>
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterProjects('all', this)">
+          All
+        </button>
+        <button class="filter-btn" onclick="filterProjects('frontend', this)">
+          Frontend
+        </button>
+        <button class="filter-btn" onclick="filterProjects('backend', this)">
+          Backend
+        </button>
+        <button class="filter-btn" onclick="filterProjects('fullstack', this)">
+          Full-Stack
+        </button>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+        <div class="project-card" data-type="fullstack">
+          <div class="project-thumb">&lt;/&gt;</div>
+          <div class="project-body">
+            <h3>E-Commerce Platform</h3>
+            <p>
+              A full-stack online store with product listings, cart, and payment
+              integration.
+            </p>
+            <div class="tech-badges">
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="#">Live Demo →</a>
+              <a href="#">GitHub →</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-type="frontend">
+          <div class="project-thumb">✦</div>
+          <div class="project-body">
+            <h3>Creative Agency Landing Page</h3>
+            <p>
+              A bold, animated landing page for a design agency with
+              scroll-triggered effects.
+            </p>
+            <div class="tech-badges">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#">Live Demo →</a>
+              <a href="#">GitHub →</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-type="backend">
+          <div class="project-thumb">⚙</div>
+          <div class="project-body">
+            <h3>REST API — Task Manager</h3>
+            <p>
+              A secure task management API with auth, CRUD operations, and user
+              roles.
+            </p>
+            <div class="tech-badges">
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">Express</span>
+              <span class="tech-badge">MySQL</span>
+            </div>
+            <div class="project-links">
+              <a href="#">Docs →</a>
+              <a href="#">GitHub →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+      <p class="section-label">Kind Words</p>
+      <h2>What Clients Say</h2>
+      <div class="divider"></div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p>
+            Abdulrazak delivered our project ahead of schedule and the quality
+            was outstanding. He understood exactly what we needed and brought
+            great ideas to the table.
+          </p>
+          <div class="testimonial-author">
+            <strong>Sarah O.</strong>
+            <span>Founder, TechStart Lagos</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p>
+            Working with Razak was seamless. He built our backend API from
+            scratch and made it scalable and well-documented. Highly recommend.
+          </p>
+          <div class="testimonial-author">
+            <strong>David K.</strong>
+            <span>Product Manager, FinEdge</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p>
+            The landing page he designed for us got real compliments from our
+            users. Clean, fast, and exactly on brand. A true full-stack talent.
+          </p>
+          <div class="testimonial-author">
+            <strong>Amina B.</strong>
+            <span>CEO, CreativeHive</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog">
+      <p class="section-label">My Thoughts</p>
+      <h2>Latest Articles</h2>
+      <div class="divider"></div>
+      <div class="blog-grid">
+        <div class="blog-card">
+          <div class="blog-date">June 10, 2026</div>
+          <h3>CSS Grid vs Flexbox: When to Use Which</h3>
+          <p>
+            A practical breakdown of when to reach for Grid and when Flexbox is
+            the right tool for the job.
+          </p>
+          <a href="#">Read More →</a>
+        </div>
+        <div class="blog-card">
+          <div class="blog-date">May 28, 2026</div>
+          <h3>Building Your First REST API with Node.js & Express</h3>
+          <p>
+            Step-by-step guide to creating a clean, secure API from scratch
+            using Express and MongoDB.
+          </p>
+          <a href="#">Read More →</a>
+        </div>
+        <div class="blog-card">
+          <div class="blog-date">May 12, 2026</div>
+          <h3>Why Every Developer Should Have a Portfolio</h3>
+          <p>
+            Your portfolio is your proof of work. Here's how to build one that
+            actually gets you hired.
+          </p>
+          <a href="#">Read More →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <p class="section-label">Let's Talk</p>
+      <h2>Get In Touch</h2>
+      <div class="divider"></div>
+      <div class="contact-wrap">
+        <div class="contact-info">
+          <p>
+            Have a project in mind or want to collaborate? I'm open to freelance
+            work, contract roles, and exciting opportunities.
+          </p>
+          <div class="contact-socials">
+            <a href="#" class="social-link"
+              >🐙 <span>github.com/abdulrazak</span></a
+            >
+            <a href="#" class="social-link"
+              >💼 <span>linkedin.com/in/abdulrazak</span></a
+            >
+            <a href="#" class="social-link">🐦 <span>@abdulrazak_dev</span></a>
+            <a href="mailto:hello@abdulrazak.dev" class="social-link"
+              >✉️ <span>hello@abdulrazak.dev</span></a
+            >
+          </div>
+        </div>
+        <form id="contact-form" onsubmit="handleSubmit(event)">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <textarea
+            id="message"
+            placeholder="Tell me about your project..."
+            required
+          ></textarea>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            style="align-self: flex-start"
+          >
+            Send Message
+          </button>
+          <p class="form-msg" id="form-msg">
+            ✓ Message sent! I'll get back to you soon.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        Built by Abdulrazak Al ameen Adeola &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; All
+        rights reserved
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
