@@ -1,41 +1,39 @@
-function filterProjects(type, btn) {
-  document
-    .querySelectorAll(".filter-btn")
-    .forEach((b) => b.classList.remove("active"));
-  btn.classList.add("active");
-  document.querySelectorAll(".project-card").forEach((card) => {
-    card.style.display =
-      type === "all" || card.dataset.type === type ? "block" : "none";
-  });
-}
+// Get the menu button from HTML
+const menuBtn = document.getElementById("menuBtn");
 
-function handleSubmit(e) {
-  e.preventDefault();
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-  if (!name || !email || !message) return;
-  const msg = document.getElementById("form-msg");
-  msg.style.display = "block";
-  document.getElementById("contact-form").reset();
-  setTimeout(() => (msg.style.display = "none"), 5000);
-}
+// Get the nav links from HTML
+const navLinks = document.getElementById("navLinks");
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) {
-        e.target.style.opacity = 1;
-        e.target.style.transform = "translateY(0)";
-      }
-    });
-  },
-  { threshold: 0.1 },
-);
+// When menu button is clicked, show or hide the menu
+menuBtn.addEventListener("click", function () {
+  navLinks.classList.toggle("show");
+});
 
-document.querySelectorAll("section").forEach((s) => {
-  s.style.opacity = 0;
-  s.style.transform = "translateY(24px)";
-  s.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-  observer.observe(s);
+// Get the contact form
+const contactForm = document.getElementById("contactForm");
+
+// Get the message paragraph
+const formMessage = document.getElementById("formMessage");
+
+// When user submits the form
+contactForm.addEventListener("submit", function (event) {
+  // Stop the page from refreshing
+  event.preventDefault();
+
+  // Get input values
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  // Check if any field is empty
+  if (name === "" || email === "" || message === "") {
+    formMessage.textContent = "Please fill in all fields.";
+    return;
+  }
+
+  // Show success message
+  formMessage.textContent = "Thank you, " + name + "! Your message has been received.";
+
+  // Clear the form
+  contactForm.reset();
 });
